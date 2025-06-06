@@ -158,6 +158,7 @@ var _hmt = _hmt || [];
 <li class="not_active with_link"><a href="/maixpy/doc/zh/vision/hand_landmarks.html"><span class="label">手部关键点检测</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/maixpy/doc/zh/vision/body_pose_classification.html"><span class="label">人体姿态分类器</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/maixpy/doc/zh/vision/hand_gesture_classification.html"><span class="label">手势分类器</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/maixpy/doc/zh/vision/yolo_world.html"><span class="label">YOLO-World 检测任意物体</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/maixpy/doc/zh/vision/maixhub_train.html"><span class="label">MaixHub 在线训练 AI 模型</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/maixpy/doc/zh/vision/customize_model_yolov5.html"><span class="label">离线训练 YOLOv5 模型</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/maixpy/doc/zh/vision/customize_model_yolov8.html"><span class="label">离线训练 YOLO11/YOLOv8 模型</span><span class=""></span></a></li>
@@ -176,6 +177,12 @@ var _hmt = _hmt || [];
 <li class="not_active with_link"><a href="/maixpy/doc/zh/audio/ai_classify.html"><span class="label">AI 声音分类</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/maixpy/doc/zh/pro/customize_model.html"><span class="label">移植新模型</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/maixpy/doc/zh/audio/deploy_online_recognition.html"><span class="label">部署在线语音识别环境</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">AI 大模型</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/maixpy/doc/zh/mllm/llm_qwen.html"><span class="label">Qwen 大语言模型</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/maixpy/doc/zh/mllm/llm_deepseek.html"><span class="label">DeepSeek 大语言模型</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/maixpy/doc/zh/mllm/vlm_internvl.html"><span class="label">InternVL 视觉语言模型</span><span class=""></span></a></li>
 </ul>
 </li>
 <li class="not_active no_link"><a><span class="label">视频</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
@@ -225,6 +232,7 @@ var _hmt = _hmt || [];
 <li class="not_active with_link"><a href="/maixpy/doc/zh/modules/pmu.html"><span class="label">电源管理单元</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/maixpy/doc/zh/modules/fp5510.html"><span class="label">音圈电机 FP5510</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/maixpy/doc/zh/modules/spilcd.html"><span class="label">SPI LCD 屏幕</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/maixpy/doc/zh/modules/bluetooth.html"><span class="label">蓝牙</span><span class=""></span></a></li>
 </ul>
 </li>
 <li class="not_active no_link"><a><span class="label">项目实战</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
@@ -234,6 +242,7 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 <li class="not_active no_link"><a><span class="label">进阶</span><span class="sub_indicator"></span></a><ul class="show">
+<li class="not_active with_link"><a href="/maixpy/doc/zh/pro/memory.html"><span class="label">内存使用说明</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/maixpy/doc/zh/source_code/contribute.html"><span class="label">贡献文档和代码</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/maixpy/doc/zh/source_code/build.html"><span class="label">构建 MaixPy 源码</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/maixpy/doc/zh/source_code/faq.html"><span class="label">MaixPy 源码 FAQ</span><span class=""></span></a></li>
@@ -410,7 +419,8 @@ anchors = 10,13, 16,30, 33,23, 30,61, 62,45, 59,119, 116,90, 156,198, 373,326
 labels = person, bicycle, car, motorcycle, airplane, bus, train, truck, boat, traffic light, fire hydrant, stop sign, parking meter, bench, bird, cat, dog, horse, sheep, cow, elephant, bear, zebra, giraffe, backpack, umbrella, handbag, tie, suitcase, frisbee, skis, snowboard, sports ball, kite, baseball bat, baseball glove, skateboard, surfboard, tennis racket, bottle, wine glass, cup, fork, knife, spoon, bowl, banana, apple, sandwich, orange, broccoli, carrot, hot dog, pizza, donut, cake, chair, couch, potted plant, bed, dining table, toilet, tv, laptop, mouse, remote, keyboard, cell phone, microwave, oven, toaster, sink, refrigerator, book, clock, vase, scissors, teddy bear, hair drier, toothbrush
 </code></pre>
 <p>这里制定了 <code>model</code> 为相对这个<code>.mud</code>文件目录的 <code>yolov5s_224_int8.cvimodel</code> 文件为模型文件，如果你改了<code>yolov5s_224_int8.cvimodel</code> 为其它名，那也需要改这里。</p>
-<h2 id="MaixVision-import-maix-%E6%98%BE%E7%A4%BA%E7%BA%A2%E8%89%B2%E6%B3%A2%E6%B5%AA%E7%BA%BF">MaixVision import maix 显示红色波浪线</h2>
+<h2 id="MaixVision-import-maix-%E6%98%BE%E7%A4%BA%E7%BA%A2%E8%89%B2%E6%B3%A2%E6%B5%AA%E7%BA%BF-%26quot%3Bmaix%26quot%3B-is-not-accessed">MaixVision import maix 显示红色波浪线 &quot;maix&quot; is not accessed</h2>
+<p>MaixVision 显示 <code>no maix moudle</code> <code>&quot;maix&quot; is not accessed</code> 或者 <code>Import &quot;maix&quot; could not be resolved</code>。</p>
 <p>这是 MaixVision 的代码提示功能报错找不到 maix 模块。<br />
 这里需要搞清楚一个概念： MaixVision 的代码提示依赖的是电脑本地的 Python 包，代码运行依赖的设备端的 Python 包，所以要让 MaixVision 能够提示就要在电脑上也安装 Python 和 <code>MaixPy</code> 包。具体请看<a href="./basic/maixvision.html"  >MaixVision 使用文档</a>。</p>
 <h2 id="MaixVision-%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6%EF%BC%8C%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E7%9A%84%E4%BB%A3%E7%A0%81">MaixVision 如何编写多个文件，一个文件导入另一个文件的代码</h2>
@@ -507,6 +517,30 @@ except:
 <li>关掉maixvision的预览视图，或者切换到png流</li>
 </ol>
 <p>由于这是底层框架上遗留的问题，目前只能从应用层解决，尽量保证程序正常的退出</p>
+<h2 id="%E5%A6%82%E4%BD%95%E5%8D%B8%E8%BD%BD%E5%B7%B2%E7%BB%8F%E5%AE%89%E8%A3%85%E7%9A%84%E5%BA%94%E7%94%A8">如何卸载已经安装的应用</h2>
+<p>在开发板 <code>应用商店</code> 中可以直接卸载已经安装的应用，请看<a href="./basic/app.html"  >应用使用文档</a>。</p>
+<h2 id="%E7%94%BB%E9%9D%A2%E6%80%8E%E4%B9%88%E5%BE%88%E6%A8%A1%E7%B3%8A%EF%BC%8C%E5%83%8F%E5%8A%A0%E4%BA%86%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E4%B8%80%E6%A0%B7">画面怎么很模糊，像加了高斯模糊一样</h2>
+<p>对于 MaixCAM， 镜头是需要手动对焦的，物理上拧镜头即可实现调焦。</p>
+<h2 id="No-module-named-%27lcd%27-%27sensor%27%EF%BC%8COpenMV-%E7%9A%84%E4%BB%A3%E7%A0%81%E5%A6%82%E4%BD%95%E7%A7%BB%E6%A4%8D/%E5%85%BC%E5%AE%B9-OpenMV-%E7%9A%84%E4%BB%A3%E7%A0%81">No module named 'lcd' 'sensor'，OpenMV 的代码如何移植/兼容 OpenMV 的代码</h2>
+<p>MaixPy (v4) 兼容了 OpenMV 和 MaixPy-v1 的代码，都放到了<code>maix.v1</code>模块下，比如 OpenMV 和 MaixPy-v1 中：</p>
+
+<pre class="language-python"><code class="language-python">import lcd, sensor
+</code></pre>
+<p>在 MaixPy (v4) 中：</p>
+
+<pre class="language-python"><code class="language-python">from maix.v1 import lcd, sensor
+</code></pre>
+<p>或者直接导入所有兼容包（不推荐，程序可读性变差）：</p>
+
+<pre class="language-python"><code class="language-python">from maix.v1 import *
+import lcd, sensor
+</code></pre>
+<p>最新的 MaixPy 兼容 OpenMV/MaixPy-v1 的方式是在新 API 的基础上封装了一个兼容层，源码在<a href="https://github.com/sipeed/MaixPy/tree/main/maix/v1"  target="_blank">https://github.com/sipeed/MaixPy/tree/main/maix/v1</a>。<br />
+所以<strong>强烈推荐升级到新的 MaixPy API</strong>，API 更丰富而且更高效。<br />
+如果一定要用旧的 API 而且发现某个 API 官方没有实现，可以尝试修改上述源码支持，底层调用新的API即可，然后提交贡献到<a href="https://github.com/sipeed/MaixPy"  target="_blank">https://github.com/sipeed/MaixPy</a> 即可，方法可以参考<a href="./source_code/contribute.html"  >参与 MaixPy 项目文档</a></p>
+<h2 id="MaixCAM-%E8%87%AA%E5%B8%A6%E7%9A%84%E7%9B%B8%E6%9C%BA-APP-%E6%8B%8D%E6%91%84%E7%9A%84%E7%85%A7%E7%89%87%E5%92%8C%E8%A7%86%E9%A2%91%E5%AD%98%E5%9C%A8%E5%93%AA%E5%84%BF%EF%BC%8C%E6%80%8E%E4%B9%88%E5%AF%BC%E5%87%BA%E5%88%B0%E7%94%B5%E8%84%91">MaixCAM 自带的相机 APP 拍摄的照片和视频存在哪儿，怎么导出到电脑</h2>
+<p>MaixCAM 自带的<strong>相机</strong>应用拍摄的照片和视频可以在自带的<strong>相册</strong>应用看到照片，点击<code>Info</code>按钮可以看到照片路径。<br />
+通过 <a href="./basic/maixvision.html"  >MaixVision 的文件管理功能</a> 或者其它拷贝工具（比如scp 或者 winscp）即可拷贝到电脑上。</p>
 
                         
                     </div>
